@@ -394,7 +394,12 @@ include $(BUILD_SYSTEM)/rbe.mk
 endif
 
 # GCC version selection
+#TARGET_GCC_VERSION := 4.9
+ifeq ($(TARGET_ARCH),riscv64)
+TARGET_GCC_VERSION := 8.1
+else
 TARGET_GCC_VERSION := 4.9
+endif
 ifdef TARGET_2ND_ARCH
 2ND_TARGET_GCC_VERSION := 4.9
 endif

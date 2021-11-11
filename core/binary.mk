@@ -166,7 +166,7 @@ ifneq ($(LOCAL_SDK_VERSION),)
   # Make sure we've built the NDK.
   my_additional_dependencies += $(SOONG_OUT_DIR)/ndk_base.timestamp
 
-  ifneq (,$(filter arm64 x86_64,$(my_arch)))
+  ifneq (,$(filter arm64 riscv64 x86_64,$(my_arch)))
     my_min_sdk_version := 21
   else
     my_min_sdk_version := $(MIN_SUPPORTED_SDK_VERSION)
