@@ -33,7 +33,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
 
 # Enable mainline checking for excat this product name
-ifeq (aosp_arm64,$(TARGET_PRODUCT))
+ifeq (aosp_riscv64,$(TARGET_PRODUCT))
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 endif
 
@@ -57,10 +57,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/board/generic_riscv64/device.mk)
 #
 # Special settings for GSI releasing
 #
-ifeq (aosp_arm64,$(TARGET_PRODUCT))
+ifeq (aosp_riscv64,$(TARGET_PRODUCT))
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_release.mk)
 endif
-
 
 PRODUCT_NAME := aosp_riscv64
 PRODUCT_DEVICE := generic_riscv64

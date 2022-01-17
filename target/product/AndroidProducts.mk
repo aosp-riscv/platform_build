@@ -36,18 +36,18 @@ ifneq ($(TARGET_BUILD_APPS),)
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_arm64.mk \
     $(LOCAL_DIR)/aosp_arm.mk \
+    $(LOCAL_DIR)/aosp_riscv64.mk \
     $(LOCAL_DIR)/aosp_x86_64.mk \
     $(LOCAL_DIR)/aosp_x86.mk \
     $(LOCAL_DIR)/full.mk \
     $(LOCAL_DIR)/full_x86.mk \
-	$(LOCAL_DIR)/aosp_riscv64.mk \
 
 else
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_64bitonly_x86_64.mk \
     $(LOCAL_DIR)/aosp_arm64.mk \
     $(LOCAL_DIR)/aosp_arm.mk \
-	$(LOCAL_DIR)/aosp_riscv64.mk \
+    $(LOCAL_DIR)/aosp_riscv64.mk \
     $(LOCAL_DIR)/aosp_x86_64.mk \
     $(LOCAL_DIR)/aosp_x86_arm.mk \
     $(LOCAL_DIR)/aosp_x86.mk \
@@ -84,6 +84,6 @@ PRODUCT_MAKEFILES += \
 COMMON_LUNCH_CHOICES := \
     aosp_arm64-eng \
     aosp_arm-eng \
-	aosp_riscv64-eng \
+    aosp_riscv64-eng \
     aosp_x86_64-eng \
     aosp_x86-eng \
